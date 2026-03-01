@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  background: #dcdcdc;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.hero {
+  height: 300vh;
+  position: relative;
+}
+
+/* 🛣️ ROAD */
+.road-wrapper {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.road-line {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 180px;
+  width: 100%;
+  background: #222;
+}
+
+.road-progress {
+  height: 100%;
+  width: 0%;
+  background: #66d17a;
+  display: flex;
+  align-items: center;
+}
+
+.progress-text {
+  font-size: 70px;
+  letter-spacing: 14px;
+  font-weight: 800;
+  color: #000;
+  padding-left: 40px;
+  white-space: nowrap;
+  clip-path: inset(0 100% 0 0);
+}
+
+/* 🚗 CAR */
+.car {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 420px;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+/* MILESTONES */
+/* Milestones base */
+.milestone {
+  position: absolute;
+  right: 40px;             /* fixed right side where car ends */
+  width: clamp(150px, 16vw, 220px);
+  text-align: center;
+  opacity: 0;              /* hidden initially */
+  transform: translateY(50px);  /* for animation */
+  z-index: 100;
+}
+
+/* TOP ROW — above road */
+.m1 { bottom: calc(20% + 120px); right: 340px; } /* left box in top row */
+.m2 { bottom: calc(20% + 120px); right: 40px; }  /* right box in top row */
+
+/* BOTTOM ROW — below road */
+.m3 { top: calc(85% + 120px); right: 340px; }    /* left box in bottom row */
+.m4 { top: calc(85% + 120px); right: 40px; }     /* right box in bottom row */
+
+/* Cards */
+.card {
+  padding: 20px 30px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.green { background: #c6e63a; }
+.dark { background: #333; color: #fff; }
+.blue { background: #67b7dc; }
+.orange { background: #f06d2f; }
+
+/* Connector */
+.connector {
+  width: 4px;
+  height: 60px;
+  background: limegreen;
+  margin-left: auto;
+  margin-right: 0;
+}
